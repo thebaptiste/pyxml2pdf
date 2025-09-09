@@ -30,7 +30,7 @@ setup(
     package_dir={"": "src"},
     include_package_data=True,
     documentation="pyxml2pdf.readthedocs.io",
-    install_requires=["defusedxml", "download", "reportlab>=4", "pypdf2"],
+    install_requires=["defusedxml", "download", "reportlab>=4", "pypdf>=3.9.0"],
     python_requires=">=3.8",
     classifiers=[
         "Development Status :: 4 - Beta",
