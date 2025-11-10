@@ -89,14 +89,6 @@ workflows:
   test_and_deploy:
     jobs:
       - test:
-          name: "test_python_3.8"
-          tag: "3.8"
-          pyenv: "py38"
-      - test:
-          name: "test_python_3.9"
-          tag: "3.9"
-          pyenv: "py39"
-      - test:
           name: "test_python_3.10"
           tag: "3.10"
           pyenv: "py310"
@@ -111,8 +103,6 @@ workflows:
           pyenv: "py312"
       - semantic-release:
           requires:
-              - test_python_3.8
-              - test_python_3.9
               - test_python_3.10
               - test_python_3.11
               - test_python_3.12
