@@ -48,7 +48,8 @@ commands:
     - run:
         name: Upgrade pip
         command: |
-          pip install --upgrade pip pip-tools
+          pip install --upgrade 'pip<25.3'
+          pip install --upgrade pip-tools
           python -m piptools sync requirements/requirements.txt requirements/dev-requirements.txt
 
   tox:
